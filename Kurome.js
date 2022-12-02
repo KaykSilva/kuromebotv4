@@ -1411,10 +1411,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'join': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Enter The Group Link!`)
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return replay(`Invalid Link!`)
@@ -1424,19 +1421,13 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'leave': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!isCreator) return replay(`${mess.owner}`)
                 await Kurome.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
                 break
             case 'setexif': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Example : ${prefix + command} packname|author`)
                 global.packname = text.split("|")[0]
@@ -1445,13 +1436,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'kick': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }else{
-                    result = fs.readFileSync(`./KuromeMedia/vn/kick.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-                 } 
+                
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1469,13 +1454,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'promote': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }else{
-                    result = fs.readFileSync(`./KuromeMedia/vn/promote.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-                 } 
+               
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1501,13 +1480,7 @@ Eu shipooo❤️💖👀`
 
 
             case 'demote': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }else{
-                    result = fs.readFileSync(`./KuromeMedia/vn/demote.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-                 } 
+            
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1517,10 +1490,7 @@ Eu shipooo❤️💖👀`
                 break
 
             case 'block': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+       
                 if (!isCreator) return replay(`${mess.owner}`)
                 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
                 await Kurome.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -1528,21 +1498,14 @@ Eu shipooo❤️💖👀`
                 break
 
             case 'unblock': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+               
                 if (!isCreator) return replay(`${mess.owner}`)
                 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
                 await Kurome.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
                 break
             case 'setname': case 'setgcname': case 'setsubject': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
                 
-                 } 
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
@@ -1551,10 +1514,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'setdesc': case 'setdesk': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+               
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
@@ -1563,10 +1523,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'perfilbot': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -1576,10 +1533,7 @@ Eu shipooo❤️💖👀`
                 reply(mess.success)
             }
                 break
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+               
             case 'setgrouppp': case 'setgruppp': case 'ftgrupo': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1592,13 +1546,7 @@ Eu shipooo❤️💖👀`
             }
                 break
             case 'tagall': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }else{
-                    result = fs.readFileSync(`./KuromeMedia/vn/tagall.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-                 } 
+                
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1613,10 +1561,7 @@ Eu shipooo❤️💖👀`
                 break
 
             case 'hidetag': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1800,10 +1745,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             }
                 break
             case 'group': case 'grup': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1822,10 +1764,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             }
                 break
             case 'editinfo': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1845,10 +1784,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
                 break
 
             case 'antilink': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+               
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1870,13 +1806,6 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             }
                 break
             case 'mute': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }else{
-                    result = fs.readFileSync(`./KuromeMedia/vn/ban.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-                 } 
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1927,10 +1856,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
                 break
 
             case 'bcgc': case 'bcgroup': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+                
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Xeon Handsome`)
                 let getGroups = await Kurome.groupFetchAllParticipating()
@@ -1967,10 +1893,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             }
                 break
             case 'bc': case 'broadcast': case 'bcall': {
-                if (!isAdmins === true){
-                    result = fs.readFileSync(`./KuromeMedia/vn/superior.mp3`)
-                    Kurome.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })  
-                 }
+    
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Xeon`)
                 let anu = await store.chats.all().map(v => v.id)
